@@ -64,7 +64,7 @@ $HOME/.config/waybar/config.jsonc
     "custom/cycle_wall":{
         "format":"  󰊠  ",
         // "interval": 1,
-        "on-click": "sleep 0.1";"$HOME/.local/bin/cycle_wall.sh",
+        "on-click": "sleep 0.1;$HOME/.local/bin/cycle_wall.sh",
         "tooltip": false
     },
 
