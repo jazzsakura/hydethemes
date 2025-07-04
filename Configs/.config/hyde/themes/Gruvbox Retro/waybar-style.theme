@@ -1,6 +1,6 @@
 $HOME/.config/waybar/style.css
 * {
-    font-family: "Iosevka, Material Design Icons";
+    font-family: "JetBrainsMono Nerd Font, Material Design Icons";
     font-size: 14px;
 }
 
