@@ -10,8 +10,8 @@ $HOME/.config/waybar/config.jsonc
     "margin-right":-10,
     "margin-bottom":-5,
     "margin-top":-5,
-    "modules-left": ["hyprland/workspaces","custom/cycle_wall"],
-    "modules-right": [ "tray", "pulseaudio" , "backlight","battery", "custom/updates", "clock"],
+    "modules-left": ["hyprland/workspaces", "custom/cycle_wall"],
+    "modules-right": ["tray", "cpu", "memory", "pulseaudio" , "battery", "custom/updates", "clock"],
     "modules-center": ["hyprland/window"],
     // Modules configuration
 
