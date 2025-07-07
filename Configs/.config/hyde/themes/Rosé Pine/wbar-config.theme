@@ -8,11 +8,11 @@ $HOME/.config/waybar/config.jsonc
     // Choose the order of the modules
     "margin-left":-10,
     "margin-right":-10,
-   // "margin-bottom":-10,
+    "margin-bottom":-5,
     "margin-top":-5,
     "modules-left": ["hyprland/workspaces","custom/cycle_wall"],
-    "modules-right": [ "tray", "pulseaudio" , "backlight","battery", "custom/notification", "clock"],
-    "modules-center": ["custom/waybar-mpris"],
+    "modules-right": [ "tray", "pulseaudio" , "backlight","battery", "custom/updates", "clock"],
+    "modules-center": ["hyprland/window"],
     // Modules configuration
 
 
@@ -50,9 +50,9 @@ $HOME/.config/waybar/config.jsonc
 },
 
     "hyprland/window": {
-        "max-length": 200,
+        "max-length": 30,
         "separate-outputs": true
-    },
+     },
     
     "hyprland/submap": {
         "format": "✌️ {}",
@@ -81,7 +81,7 @@ $HOME/.config/waybar/config.jsonc
         // The options below will go to next/previous track on scroll
             // "on-scroll-up": "waybar-mpris --send next",
             // "on-scroll-down": "waybar-mpris --send prev",
-        "escape": true,
+        "escape": true
     },
 
     "jack": {
@@ -112,14 +112,6 @@ $HOME/.config/waybar/config.jsonc
         "on-click": "playerctl next",
         "on-scroll-up": "playerctl previous",
         "on-click-right": "playerctl stop"
-    },
-
-    "custom/weather": {
-        "exec": "python ~/.config/hypr/scripts/weather.py",
-        "restart-interval": 300,
-        "return-type": "json",
-        "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
-        // "format-alt": "{alt}",
     },
 
     "tray": {
@@ -167,7 +159,7 @@ $HOME/.config/waybar/config.jsonc
          "format-good": "", // An empty format will hide the module
          "format-full": "󰁹",
         "format-icons": ["󰂎","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "on-click": "sleep 0.1; ~/.config/hypr/scripts/wofi-power.sh",
+        "on-click": "sleep 0.1; ~/.config/hypr/scripts/wofi-power.sh"
     },
     "pulseaudio": {
         "format": "{volume} {icon}",
@@ -186,7 +178,7 @@ $HOME/.config/waybar/config.jsonc
         "on-click-right": "sleep 0.1 && pavucontrol",
       "on-click": "sleep 0.1 && ~/.config/hypr/scripts/volume --toggle",
       "on-scroll-down": "sleep 0.1 && ~/.config/hypr/scripts/volume --inc",
-      "on-scroll-up": "sleep 0.1 && ~/.config/hypr/scripts/volume --dec",
+      "on-scroll-up": "sleep 0.1 && ~/.config/hypr/scripts/volume --dec"
     },
     "network": {
         "interface": "wlp2s0",
