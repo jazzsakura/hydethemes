@@ -104,16 +104,6 @@ $HOME/.config/waybar/config.jsonc
 		}
 	},
 
-
-    "custom/spotify": {
-        "exec": "/usr/bin/python3 .config/hypr/scripts//mediaplayer.py --player spotify",
-        "format": "{}  󰓇",
-        "return-type": "json",
-        "on-click": "playerctl next",
-        "on-scroll-up": "playerctl previous",
-        "on-click-right": "playerctl stop"
-    },
-
     "tray": {
         "icon-size": 14,
         "spacing": 8,
@@ -176,9 +166,9 @@ $HOME/.config/waybar/config.jsonc
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click-right": "sleep 0.1 && pavucontrol",
-      "on-click": "sleep 0.1 && ~/.config/hypr/scripts/volume --toggle",
-      "on-scroll-down": "sleep 0.1 && ~/.config/hypr/scripts/volume --inc",
-      "on-scroll-up": "sleep 0.1 && ~/.config/hypr/scripts/volume --dec"
+      "on-click": "sleep 0.1 && ~/.local/bin/scripts/volume --toggle",
+      "on-scroll-down": "sleep 0.1 && ~/.local/bin/scripts/volume --inc",
+      "on-scroll-up": "sleep 0.1 && ~/.local/bin/scripts/volume --dec"
     },
     "network": {
         "interface": "wlp2s0",
